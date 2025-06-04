@@ -18,7 +18,7 @@ source venv/bin/activate
 ```
 cd backend
 # install Python dependencies
-pip install -r backend/requirements.txt
+pip install -r backend/backend/requirements.txt
 
 # apply migrations and start the server
 python manage.py migrate
@@ -27,11 +27,28 @@ python manage.py runserver
 
 ### Frontend
 
-```
-cd frontend
-npm install
-npx ng serve
-```
+1. Change into the `frontend` directory
+
+   ```bash
+   cd frontend
+   ```
+
+2. Install Node dependencies (this installs Tailwind CSS and Angular CLI)
+
+   ```bash
+   npm install
+   ```
+
+3. Start the development server
+
+   ```bash
+   npx ng serve
+   ```
+
+   The application will be available at `http://localhost:4200` and will reload
+   automatically when source files change.
+
+4. Open your browser to http://localhost:4200 to use the application.
 
 ### Running Tests
 

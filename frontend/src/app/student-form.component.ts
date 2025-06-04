@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
@@ -42,20 +42,24 @@ import { CommonModule } from '@angular/common';
   `,
 })
 export class StudentFormComponent implements OnInit {
-  form = this.fb.nonNullable.group({
-    first_name: '',
-    last_name: '',
-    email: '',
-    enrollment_date: '',
-  });
-  id?: number;
+  form: FormGroup;
 
   constructor(
     private fb: FormBuilder,
     private service: StudentsService,
     private router: Router,
     private route: ActivatedRoute
-  ) {}
+  ) {
+    this.form = this.fb.nonNullable.group({
+      first_name: '',
+      last_name: '',
+      email: '',
+      enrollment_date: '',
+    });
+  }
+  id?: number;
+
+  
 
   ngOnInit(): void {
     const param = this.route.snapshot.paramMap.get('id');
