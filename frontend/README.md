@@ -44,8 +44,8 @@ To execute unit tests with the [Karma](https://karma-runner.github.io) test runn
 ng test
 ```
 
-By default the configuration launches Chrome in headless mode. Ensure
-that the browser is installed on your system.
+By default the configuration launches Microsoft Edge in headless mode.
+Ensure that Edge is installed on your system.
 
 ## Running end-to-end tests
 
