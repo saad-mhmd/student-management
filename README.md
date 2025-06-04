@@ -43,9 +43,9 @@ python manage.py test
 
 **Frontend**
 
-The Angular project runs Karma tests in headless Chrome. Ensure Chrome is
+The Angular project runs Karma tests in headless Edge. Ensure Microsoft Edge is
 installed and run:
 
 ```bash
 npm test
-``` 
+```
