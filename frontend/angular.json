@@ -75,18 +75,14 @@
               "zone.js/testing"
             ],
             "tsConfig": "tsconfig.spec.json",
-            "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
-            ],
-            "styles": [
-              "src/styles.css"
-            ]
+            "karmaConfig": "karma.conf.js",
+            "browsers": "Edge"
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "6ca92ee7-d535-4519-a52a-50c13a980404"
   }
 }
