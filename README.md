@@ -4,11 +4,23 @@ Student Management Website using Angular (TypeScript) for the frontend and Djang
 
 ## Development
 
+The project requires **Python 3.12+** and **Node.js 18+**. It's best to
+work inside a virtual environment when installing the backend
+dependencies:
+
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
 ### Backend
 
 ```
 cd backend
-pip install -r requirements.txt
+# install Python dependencies
+pip install -r backend/requirements.txt
+
+# apply migrations and start the server
 python manage.py migrate
 python manage.py runserver
 ```
