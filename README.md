@@ -1,2 +1,6 @@
 # student-management
-Student Management Website Using Angular, TypeScript, Django, PostgreSQL. In addition to TailwindCSS and Angular Material when needed.
+
+Student Management Website using Angular, TypeScript, Django, PostgreSQL. TailwindCSS and Angular Material are used when needed.
+
+## Testing
+Karma tests run using Chrome Headless.
