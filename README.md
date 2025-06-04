@@ -18,7 +18,7 @@ source venv/bin/activate
 ```
 cd backend
 # install Python dependencies
-pip install -r backend/requirements.txt
+pip install -r backend/backend/requirements.txt
 
 # apply migrations and start the server
 python manage.py migrate
