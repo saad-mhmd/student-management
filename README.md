@@ -2,6 +2,14 @@
 
 Student Management Website using Angular (TypeScript) for the frontend and Django (with Django REST Framework) for the backend. PostgreSQL is the intended database, with TailwindCSS and Angular Material for styling as required.
 
+## Features
+
+- REST API for creating, listing, updating and deleting students
+- Angular 20 frontend with a dashboard and student management screens
+- TailwindCSS and Angular Material styling
+- Proxy configuration so `/api` calls reach the Django backend during development
+- Docker setup with PostgreSQL for an easy local environment
+
 ## Development
 
 The project requires **Python 3.12+** and **Node.js 18+**. It's best to
@@ -61,7 +69,7 @@ in `proxy.conf.json` proxies `/api` requests to this backend server.
 3. Start the development server
 
    ```bash
-   npx ng serve
+   npm start
    ```
 
    The application will be available at `http://localhost:4200` and will reload
