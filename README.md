@@ -6,14 +6,29 @@ Student Management Website using Angular (TypeScript) for the frontend and Djang
 
 The project requires **Python 3.12+** and **Node.js 18+**. It's best to
 work inside a virtual environment when installing the backend
-dependencies:
+dependencies if you are running everything locally:
 
 ```bash
 python3 -m venv venv
 source venv/bin/activate
 ```
 
-### Backend
+### Docker Setup
+
+If you prefer running the backend inside Docker, make sure Docker is
+installed and then start the services using Docker Compose from the
+project root:
+
+```bash
+docker-compose up --build
+```
+
+The Django development server will be available on `http://localhost:8000`
+and will automatically apply migrations on start. A PostgreSQL instance is
+provided as part of the Compose setup.
+
+### Backend (local)
+If you are not using Docker, install dependencies and run the development server manually:
 
 ```
 cd backend
@@ -26,6 +41,10 @@ python manage.py runserver
 ```
 
 ### Frontend
+
+Ensure the backend is running (either locally or via Docker) on port
+`8000` before starting the Angular development server. The configuration
+in `proxy.conf.json` proxies `/api` requests to this backend server.
 
 1. Change into the `frontend` directory
 
